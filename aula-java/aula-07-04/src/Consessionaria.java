@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Consessionaria {
@@ -13,36 +14,36 @@ public class Consessionaria {
 
         verif = "S";
 
-        while (verif.equalsIgnoreCase( "S")) {
+        while (verif.equalsIgnoreCase( "S")){
 
             System.out.println ("Qual o valor do carro: ");
             valorCarro = ler.nextDouble();
 
             System.out.println ("Qual o ano do carro (yyyy): ");
-            anoCarro = ler.nextDouble();
+            anoCarro = ler.nextInt();
 
-            if (anoCarro <= 2010); {
+            if (anoCarro <= 2010) {
                 desconto = valorCarro * 0.12;
                 totalAte2010 = totalAte2010 + 1;
             }
-            Senao
-            desconto < -valorCarro * 0.07
-            FimSe
+            else
+                desconto = valorCarro * 0.07;
 
-            valorFinal < -valorCarro - desconto
 
-            Escreval("Desconto: R$ ", desconto)
-            Escreval("Valor final: R$ ", valorFinal)
+            valorFinal = valorCarro - desconto;
 
-            totalCarros < -totalCarros + 1
+            System.out.println ("Desconto: R$ " + desconto);
+            System.out.println ("Valor final: R$ " + valorFinal);
 
-            Escreva("Deseja continuar? (S/N): ")
-            Leia(verif)
+            totalCarros = totalCarros + 1;
+
+            System.out.println ("Deseja continuar? (S/N): ");
+            verif = ler.next();
 
         }
 
-        Escreva("Total de carros: ", totalCarros)
-        Escreval(" Carros até 2010: ", totalAte2010)
+        System.out.println ("Total de carros: " + totalCarros);
+        System.out.println (" Carros até 2010: " + totalAte2010);
 
 
     }
